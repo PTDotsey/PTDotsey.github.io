@@ -1,3 +1,10 @@
+<?php
+if($_POST["message"]) {
+mail("ptdotsey@gmail.com", "Here is the subject line",
+$_POST["insert your message here"]. "From: ptdotsey@gmail.com");
+}
+?>
+
 <!DOCTYPE HTML>
 <!--
 	Hyperspace by HTML5 UP
@@ -139,24 +146,9 @@
 							<p>Don't hesitate to reach out to me if you would like to work together or have any questions. I hope to hear from you soon!.</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="mailto:ptdotsey@gmail.com" class="button submit">Send Message</a></li>
-										</ul>
+									<form method="post" action="emailform.php">
+										<textarea name="message"></textarea>
+										<input type="submit">
 									</form>
 								</section>
 								<section>
